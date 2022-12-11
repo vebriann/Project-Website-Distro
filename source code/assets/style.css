@@ -1,0 +1,360 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  height: 100px;
+  overflow-y: scroll; /* Tambahkan kemampuan untuk melakukan scrolling */
+}
+
+/* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
+body {
+  -ms-overflow-style: none; /* IE dan Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
+  text-decoration: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+/* untuk pc atau laptop */
+@media screen and (min-width: 1100px) {
+  .container-headers {
+    width: 100%;
+    height: 95px;
+    position: fixed;
+    background-color: #202020;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 20% 40% 40%;
+  }
+
+  /* distro img bar */
+  .distroImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .distroImg img {
+    min-width: 70%;
+    height: auto;
+  }
+  /* akhir distro bar */
+
+  /* search bar */
+  .search {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .search-group {
+    display: flex;
+    max-width: 70%;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .searchImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 20%;
+    height: 100%;
+    background-color: #66cac4;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .searchImg img {
+    max-width: 35%;
+    height: auto;
+  }
+
+  .searchbox {
+    max-width: 100%;
+    height: 50px;
+    background-color: #d9d9d9;
+    display: inline-block;
+    margin-left: -20px;
+    padding-left: 40px;
+    padding-right: 60px;
+    line-height: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+  }
+
+  .searchbox input[type="text"],
+  .searchbox input[type="text"]:focus {
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    background: none;
+  }
+  /* akhir search */
+
+  /* Bagian Navbar */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: auto;
+    margin-left: -20px;
+  }
+
+  nav ul {
+    margin-left: 25px;
+  }
+
+  nav ul .navv {
+    list-style: none;
+    display: inline-block;
+  }
+
+  nav ul .navv a {
+    position: relative;
+    color: white;
+    font-size: 1.5vmax;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    line-height: 75px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  nav ul .navv a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    justify-content: space-around;
+    bottom: -10px;
+    left: 0px;
+    transition: 0.3s;
+  }
+
+  nav ul .navv a:hover {
+    color: lightblue;
+  }
+  nav ul .navv a:hover:after {
+    width: 100%;
+  }
+
+  
+  /* dropdown shop */
+  nav ul .dropdown {
+    display: none;
+  }
+
+  nav ul li:hover .dropdown {
+    position: absolute;
+    display: block;
+    width: 25.5vmin;
+    height: auto;
+    margin-left: -5px;
+    
+  }
+  
+  .dropdown {
+    background-color: #202020;
+  }
+  
+  
+  .dropdown ul li {
+    list-style: none;
+  }
+
+  .dropdown ul li a {
+    font-size: 1.5vmax;
+  }
+  /* akhir dropdown shop */
+
+  nav .Btnsignup {
+    margin-left: 40px;
+    width: 16.5vmin;
+    height: 6.6vmin;
+    background-color: #f0692e;
+    border: 2px solid #f0692e;
+    border-radius: 20px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  nav .Btnsignup a {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    align-self: center;
+    font-size: 1.5vmax;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+  }
+
+  nav .Btnsignup:hover  {
+    background-color: transparent;
+    border: 2px solid #f0692e;
+    border-radius: 20px;
+  }
+
+  nav .Btnsignup a:hover {
+    width: 100%;
+    height: 100%;
+    color: white;
+  }
+
+  /* akhir navbar */
+
+
+  /* Bagian Content */
+  .content {
+    background-color: coral;
+    clear: both;
+    width: 100%;
+    height: auto;
+  }
+
+  /* dasboard */
+  .content .container-dasboard {
+    width: 100%;
+    height: 100vh;
+    background-color: #494949;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .container-dasboard .columnitems-1 {
+    display: grid;
+    grid-template-rows: 55% 45%;
+  }
+
+  .columnitems-1 .mediatext {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .mediatext img {
+    width: 37vmax;
+    height: auto;
+  }
+
+  .columnitems-1 .boxmodel {
+    display: flex;
+  }
+  
+  .boxmodel .box-content {
+    width: 44.5vmin;
+    height: 22.2vmin;
+    margin-top: 10px;
+    margin-left: 115px;
+    background-color: #66CAC4;
+    border-radius: 41px;
+  }
+  
+  .box-content .paragraph {
+    width: 43.1vmin;
+    height: auto;
+    flex-wrap: wrap;
+    margin-left: 1vmin;
+    display: block;
+    margin-top: 20px;
+    
+  }
+  .paragraph p {
+    font-size: 1.2vmax;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .container-dasboard .columnitems-2 {
+    background-color: blue;
+  }
+
+
+
+  /* akhir dasboard */
+
+
+
+
+  .content .test1 {
+    width: 100%;
+    height: 100vh;
+    background-color: chartreuse;
+  }
+  .content .test2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #666;
+  }
+  .content .test3 {
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+  }
+  .content .test4 {
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+  }
+  .content .test5 {
+    width: 100%;
+    height: 100vh;
+  }
+  .content .test6 {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+  }
+
+  footer {
+    padding: 20px 0;
+    background-color: #666;
+  }
+}
+
+/* untuk device hp */
+@media screen and (min-width: 0px) and (max-width: 500px) {
+  .container-headers {
+    width: 100%;
+    height: 85px;
+    background-color: aqua;
+  }
+}
+
+/* Next device hp ke tablet   */
+@media screen and (min-width: 501px) and (max-width: 1099px) {
+  .container-headers {
+    width: 100%;
+    height: 95px;
+    background-color: red;
+  }
+}
