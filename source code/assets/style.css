@@ -39,6 +39,7 @@ body {
     display: grid;
     box-sizing: border-box;
     grid-template-columns: 20% 40% 40%;
+    z-index: 999;
   }
 
   /* distro img bar */
@@ -161,7 +162,6 @@ body {
     width: 100%;
   }
 
-  
   /* dropdown shop */
   nav ul .dropdown {
     display: none;
@@ -173,14 +173,12 @@ body {
     width: 25.5vmin;
     height: auto;
     margin-left: -5px;
-    
   }
-  
+
   .dropdown {
     background-color: #202020;
   }
-  
-  
+
   .dropdown ul li {
     list-style: none;
   }
@@ -218,7 +216,7 @@ body {
     height: 100%;
   }
 
-  nav .Btnsignup:hover  {
+  nav .Btnsignup:hover {
     background-color: transparent;
     border: 2px solid #f0692e;
     border-radius: 20px;
@@ -232,10 +230,9 @@ body {
 
   /* akhir navbar */
 
-
   /* Bagian Content */
   .content {
-    background-color: coral;
+    background-color: transparent;
     clear: both;
     width: 100%;
     height: auto;
@@ -244,7 +241,7 @@ body {
   /* dasboard */
   .content .container-dasboard {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-color: #494949;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -266,27 +263,25 @@ body {
     height: auto;
   }
 
+  /* column 1 sebelah kiri */
   .columnitems-1 .boxmodel {
-    display: flex;
-  }
-  
-  .boxmodel .box-content {
-    width: 44.5vmin;
-    height: 22.2vmin;
+    width: 19.5vmax;
+    height: 10.2vmax;
     margin-top: 10px;
     margin-left: 115px;
-    background-color: #66CAC4;
+    background-color: #66cac4;
     border-radius: 41px;
+    box-sizing: border-box;
   }
-  
+
   .box-content .paragraph {
-    width: 43.1vmin;
-    height: auto;
+    width: 100%;
     flex-wrap: wrap;
-    margin-left: 1vmin;
-    display: block;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
-    
   }
   .paragraph p {
     font-size: 1.2vmax;
@@ -294,50 +289,500 @@ body {
     font-family: "Montserrat", sans-serif;
   }
 
-  .container-dasboard .columnitems-2 {
-    background-color: blue;
+  .btnBuy {
+    width: 60%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3.1vmax;
+    margin-top: 1.1vmax;
+    background-color: #f0692e;
+    border: 4px solid #f0692e;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
+  .btnBuy:hover {
+    background-color: transparent;
+    transition: 0.3s;
+  }
+  .btnBuy img {
+    width: 2.2vmax;
+    height: auto;
+  }
 
+  .btnBuy a {
+    font-size: 1.2vmax;
+    text-decoration: none;
+    margin: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 0.3vmax;
+  }
+
+  .btnBuy a:hover {
+    color: dodgerblue;
+    transition: 0.3s;
+  }
+  /* akhir column 1 sebelah kiri */
+
+  /* column 2 sebelah kanan */
+  .container-dasboard .columnitems-2 {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .columnitems-2 img {
+    width: 37vmax;
+    height: auto;
+    position: absolute;
+  }
+  /* akhir column2 sebelah kanan */
 
   /* akhir dasboard */
 
+  /* outfit cowok */
+  .content .container-otc {
+    width: 100%;
+    height: auto;
+    background-color: #2f2f2f;
+    display: grid;
+    grid-template-areas: 20% 80%;
+    box-sizing: border-box;
+    padding-bottom: 55px;
+    padding-top: 100px;
+  }
 
+  .container-otc .mediaText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
 
+  .mediaText h1 {
+    font-size: 3vmax;
+    color: white;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    height: auto;
+    width: auto;
+    border-bottom: 7px solid #f0692e;
+  }
 
-  .content .test1 {
+  .container-otc .gallery-outfit {
+    margin-top: 50px;
     width: 100%;
     height: 100vh;
-    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
   }
-  .content .test2 {
+
+  .gallery-outfit .outfit-cowok {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .outfit-cowok .items {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  .items a {
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  .items a .item {
+    width: 15vmax;
+    height: 15vmax;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+  .items a .item img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .items a:hover > .item {
+    box-shadow: 1px 1px 20px 2px rgb(0, 0, 0.4);
+  }
+
+  .items a:hover {
+    color: #66cac4;
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+  /* akhir outfit cowok */
+
+  /* outfit cewek */
+  .content .container-otck {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 20% 80%;
+    padding-top: 105px;
+    background-color: #494949;
+  }
+
+  .container-otck .mediaTextc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mediaTextc h1 {
+    font-size: 3vmax;
+    color: white;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    height: auto;
+    width: auto;
+    border-bottom: 7px solid #f0692e;
+  }
+
+  .container-otck .gallery-outfitc {
+    margin-top: 50px;
     width: 100%;
     height: 100vh;
-    background-color: #666;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
   }
-  .content .test3 {
+
+  .gallery-outfitc .outfit-cewek {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .outfit-cewek .itemsc {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 30%;
+    margin-top: 10px;
+  }
+
+  .itemsc a {
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  .itemsc a .itemc {
+    width: 15vmax;
+    height: 15vmax;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+
+  .itemsc a .itemc img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .itemsc a:hover > .itemc {
+    box-shadow: 1px 1px 20px 2px rgb(0, 0, 0.4);
+  }
+
+  .itemsc a:hover {
+    color: #66cac4;
+    transform: scale(0.9);
+    transition: 0.3s;
+  }
+  /* akhir outfit cewek */
+
+  /* ootd cowok */
+  .content .container-ootd {
     width: 100%;
     height: 100vh;
-    background-color: blueviolet;
+    background-color: #2f2f2f;
+    display: grid;
+    padding-top: 90px;
+    padding-bottom: 170px;
+    grid-template-rows: 20% 70% 20%;
+    grid-gap: 40px;
   }
-  .content .test4 {
+
+  .container-ootd .mediaTextOotd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mediaTextOotd h1 {
+    font-size: 5vmax;
+    color: white;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    height: auto;
+    width: auto;
+    border-bottom: 7px solid #f0692e;
+  }
+
+  .container-ootd .galery-ootdCowok {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galery-ootdCowok .ootdCowok {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .ootdCowok .itemsootd {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .itemsootd a .itemootd {
+    width: 100%;
+    height: 30vmax;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .itemootd img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .itemootd:hover {
+    transition: 0.3s;
+    transform: scale(0.9);
+    box-shadow: 1px 1px 20px 2px rgb(0, 0, 0.4);
+  }
+
+  .container-ootd .viewText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .viewText .linkView {
+    width: 15%;
+    height: 39%;
+    background-color: #1e1f1f;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #1e1f1f;
+  }
+
+  .viewText .linkView:hover {
+    background-color: transparent;
+    transition: 0.3s;
+  }
+
+  .linkView a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.9vmax;
+    font-family: "Montserrat", sans-serif;
+  }
+  /* akhir ootd cowok */
+
+  /* ootd cewek */
+  .content .container-ootdCewek {
     width: 100%;
     height: 100vh;
-    background-color: blue;
+    background-color: #494949;
+    display: grid;
+    grid-gap: 40px;
+    padding-top: 90px;
+    padding-bottom: 170px;
+    grid-template-rows: 20% 70% 20%;
   }
-  .content .test5 {
+
+  .container-ootdCewek .mediaTextOotd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mediaTextOotd h1 {
+    font-size: 5vmax;
+    color: white;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    height: auto;
+    width: auto;
+    border-bottom: 7px solid #f0692e;
+  }
+
+  .container-ootdCewek .galery-ootdCewek {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galery-ootdCewek .ootdCewek {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .ootdCewek .itemsootd {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .itemsootd a .itemootd {
+    width: 100%;
+    height: 30vmax;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .itemootd img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .itemootd:hover {
+    transition: 0.3s;
+    transform: scale(0.9);
+    box-shadow: 1px 1px 20px 2px rgb(0, 0, 0.4);
+  }
+
+  .container-ootdCewek .viewText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .viewText .linkView {
+    width: 15%;
+    height: 39%;
+    background-color: #1e1f1f;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #1e1f1f;
+  }
+
+  .viewText .linkView:hover {
+    background-color: transparent;
+    transition: 0.3s;
+  }
+
+  .linkView a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.9vmax;
+    font-family: "Montserrat", sans-serif;
+  }
+  /* akhir ootd cewek */
+
+  /* brand / sponsor */
+  .content .container-brand {
+    padding-top: 40px;
     width: 100%;
     height: 100vh;
+    background-color: #2f2f2f;
+    display: grid;
+    padding-bottom: 55px;
+    grid-template-rows: 20% 80%;
+    grid-gap: 30px;
   }
-  .content .test6 {
+
+  .container-brand .mediaTextBrand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     width: 100%;
-    height: 100vh;
-    background-color: aqua;
+    height: 100%;
   }
+
+  .mediaTextBrand h1 {
+    font-size: 4vmax;
+    color: white;
+    display: inline;
+    font-family: "Montserrat", sans-serif;
+    height: auto;
+    width: auto;
+    border-bottom: 7px solid #f0692e;
+  }
+
+  .container-brand .galery-brand {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galery-brand img {
+    width: 80vmax;
+    height: auto;
+  }
+  /* akhir brand / sponsor */
 
   footer {
-    padding: 20px 0;
-    background-color: #666;
+    padding: 40px 0;
+    background-color: silver;
+  }
+
+  footer .fod-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fod-footer p {
+    font-size: 1.5vmax;
+    color: black;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
   }
 }
 
